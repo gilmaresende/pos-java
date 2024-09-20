@@ -1,0 +1,7 @@
+﻿*.class
+*/nbproject
+java-1/AtividadeSenama1/build/classes
+java-1/AtividadeSenama1/nbproject/private
+java-1/AtividadeSenama1/nbproject
+java-1/AtividadeSenama1/build.xml
+java-1/AtividadeSenama1/manifest.mf
