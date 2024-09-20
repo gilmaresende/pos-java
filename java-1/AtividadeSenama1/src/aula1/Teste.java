@@ -24,9 +24,10 @@ public class Teste {
 
         List<Veiculo> veiculos = new ArrayList<Veiculo>();
 
-        for (int veiculoN = 0; veiculoN < 5; veiculoN++) {
+        for (int veiculoN = 0; veiculoN < 2; veiculoN++) {
             System.out.println(String.format("Veiculo: %d", veiculoN + 1));
             veiculos.add(montarVeiculo());
+            System.out.println("----------------");
         }
 
         veiculos.forEach(veiculo -> {
@@ -34,9 +35,8 @@ public class Teste {
 
             //Exemplo de como faria o print usando toString da entidade, 
             //não foi usado devido enunciado pedir para usar metodos das entidades!
-            //System.out.println(String.format("Carro: ", veiculo));
-            
-            System.out.println(String.format("Carro: {placa: %s, marca: %s, modelo: %s, cor: %s, velocidade máxima: %f, Nº de rodas: %d, Motor{qtd pistões: %d, potência: %d}}",
+            //System.out.println(String.format("Veiculo: ", veiculo));
+            System.out.println(String.format("Veiculo: {placa: %s, marca: %s, modelo: %s, cor: %s, velocidade máxima: %.2f km/h, Nº de rodas: %d, Motor: {qtd pistões: %d, potência: %d cv}}",
                     veiculo.getPlaca(),
                     veiculo.getMarca(),
                     veiculo.getModelo(),
@@ -66,7 +66,10 @@ public class Teste {
         int qtdPis = scanner.nextInt();
         System.out.print("Digite a potencia do motor: ");
         int potencia = scanner.nextInt();
-
+        
+        //ler quebra de linha apos leitura de inteiro ou floate, para consumir o enter inserido para confimar a potencia
+        scanner.nextLine();
+        
         // Exemplo de criação usando apenas contrutor com parametro, como inunciado 
         // pedia que usasse os metodos para atribuir valores, este modelo não foi utilizado!
         // return new Veiculo(placa, marca, modelo, cor, velocMax, qtdRodas, qtdPis, potencia);
