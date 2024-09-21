@@ -24,7 +24,7 @@ public class Teste {
 
         List<Veiculo> veiculos = new ArrayList<Veiculo>();
 
-        for (int veiculoN = 0; veiculoN < 2; veiculoN++) {
+        for (int veiculoN = 0; veiculoN < 5; veiculoN++) {
             System.out.println(String.format("Veiculo: %d", veiculoN + 1));
             veiculos.add(montarVeiculo());
             System.out.println("----------------");
